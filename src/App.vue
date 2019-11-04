@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="min-h-screen bg-gray-800 relative overflow-hidden">
+  <div id="app" class="min-h-screen bg-gray-800 relative overflow-hidden font-sans">
     <div class="h-12 bg-gray-800 flex items-center justify-between px-4">
       <span class="font-black text-yellow-500 uppercase text-lg">Sudoku</span>
       <button @click="showNav = !showNav">
@@ -52,6 +52,11 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .nav-drawer {
   height: calc(100vh - 3rem);
   transition: transform 0.2s ease-in-out;
