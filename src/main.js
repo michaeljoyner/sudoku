@@ -21,6 +21,7 @@ const routes = [
 
 const router = new VueRouter({ routes });
 import gameStore from "./stores/games";
+import "./registerServiceWorker";
 const store = new Vuex.Store(gameStore);
 
 Vue.config.productionTip = false;
@@ -30,10 +31,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount("#app");
-
-if ("serviceWorker" in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js");
-  });
-}
